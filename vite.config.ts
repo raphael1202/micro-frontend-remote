@@ -9,8 +9,7 @@ export default defineConfig({
       name: "micro-frontend-remote",
       filename: "microFrontendRemoteEntry.js",
       exposes: {
-        "./src/features/feature-one":
-          "./src/features/feature-one/FeatureOne.tsx",
+        "./FeatureOne": "./src/features/feature-one/FeatureOne.tsx",
       },
       shared: ["react", "react-dom"],
     }),
@@ -25,7 +24,5 @@ export default defineConfig({
   build: {
     modulePreload: false,
     target: "esnext",
-    minify: false,
-    cssCodeSplit: false,
   },
 });

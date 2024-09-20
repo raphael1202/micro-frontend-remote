@@ -7,9 +7,13 @@
     "dev": "vite --port 5001 --strictPort --mode dev",
     "build": "tsc && vite build",
     "build:dev": "tsc && vite build --mode dev",
+    "build:qa": "tsc && vite build --mode qa",
+    "build:prod": "tsc && vite build --mode prod",
     "lint": "eslint .",
     "preview": "vite preview --port 5000 --strictPort",
-    "serve:dev": "npm run build:dev && vite preview --port 5000 --strictPort"
+    "serve:dev": "npm run build:dev && vite preview --port 5000 --strictPort",
+    "serve:qa": "npm run build:qa && vite preview --port 5000 --strictPort",
+    "serve:prod": "npm run build:prod && vite preview --port 5000 --strictPort"
   },
   "dependencies": {
     "react": "^18.3.1",
